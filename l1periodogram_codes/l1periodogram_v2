@@ -101,7 +101,7 @@ class l1p_class():
 
 
 
-    def l1_perio(self,
+    def l1_perio(self, name,
                  tolfact = 1.0, 
                  smoothwidth_factor = 0.5, 
                  verbose = 1, 
@@ -322,7 +322,7 @@ class l1p_class():
             start_time = time.time()
             N_markers = min(len(self.omega_peaks),
                             max_n_significance_tests)  
-            self.plot_clean(N_markers,
+            self.plot_clean(N_markers, name,
                             annotations = 'periods',
                             save = True,
                             **kwargs)            
@@ -344,7 +344,7 @@ class l1p_class():
         # ------------- Plot l1 periodogram + significance ------------- #
         if plot_output:
             start_time = time.time()            
-            self.plot_with_list(N_markers,
+            self.plot_with_list(N_markers, name,
                                significance_values = 'log10faps',
                                save = True,
                                **kwargs) 
@@ -943,7 +943,7 @@ class l1p_class():
 
        
 
-    def plot_with_list(self,number_highlighted_peaks_in,
+    def plot_with_list(self,number_highlighted_peaks_in, name,
                       significance_values='log10faps',
                       title = 'default',
                       marker_color = (0.85,0.325,0.098),
@@ -1024,12 +1024,12 @@ class l1p_class():
         plt.gcf().subplots_adjust(top=fraction_of_l1perio_plot)
         
         if save:
-            string_save = self.starname.replace(' ', '_') + '_l1_periodogram_period.pdf'
-            plt.savefig(string_save, format='pdf', rasterized = True)
+            #string_save = self.starname.replace(' ', '_') + '_l1_periodogram_period.pdf'
+            plt.savefig(name, format='pdf', rasterized = True)
 
     
         
-    def plot_clean(self,number_highlighted_peaks_in,
+    def plot_clean(self,number_highlighted_peaks_in, name,
                    annotations='periods',
                    marker_color = (0.85,0.325,0.098),
                    title = 'default',
@@ -1185,7 +1185,7 @@ class l1p_class():
         
         if save:
             string_save = self.starname.replace(' ', '_') + '_l1_periodogram_notext.pdf'
-            plt.savefig(string_save , rasterized = True,
+            plt.savefig(name , rasterized = True,
                         format='pdf')
 
 
