@@ -2,7 +2,7 @@ from setuptools import setup
 
 setup(
    name='L1_per',
-   version='v0.2.0',
+   version='v0.3.0',
    author='Jack Lubin',
    author_email='jlubin@uci.edu',
    license='LICENSE.txt',
