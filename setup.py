@@ -7,7 +7,7 @@ setup(
    author_email='jlubin@uci.edu',
    license='LICENSE.txt',
    description='Making the L1 code as written by Nathan Hara pip install-able',
-   long_description=open('README.txt').read(),
+   long_description=open('README.md').read(),
    install_requires=[
        "pytest",
    ],
