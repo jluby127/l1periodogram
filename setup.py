@@ -1,6 +1,6 @@
 from setuptools import setup
 
- setup(
+setup(
    name='L1_per',
    version='0.1.0',
    author='Jack Lubin',
