@@ -8,7 +8,8 @@ setup(
    license='LICENSE.txt',
    description='Making the L1 code as written by Nathan Hara pip install-able',
    long_description=open('README.md').read(),
-   packages=setuptools.find_packages(),
+   #packages=setuptools.find_packages(),
+   packages=find_packages(), #fix
    install_requires=[
        "pytest",
    ],
