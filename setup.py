@@ -5,7 +5,7 @@ except ImportError:
     from distutils.core import setup, find_packages
 
 setup(
-   name='L1_per',
+   name='l1periodogram_codes',
    version='v0.3.0',
    author='Jack Lubin',
    author_email='jlubin@uci.edu',
